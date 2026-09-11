@@ -1,37 +1,15 @@
-/*
-ROAD TO GREATNESS DATA LAYER
-Team list is complete. Player seed data below is intentionally modular so a
-future data update can replace/extend it without changing the game engine.
-Official league roster/stat pages should be used when refreshing live data.
-*/
-window.RTG={
-NBA:[
-["ATL","Atlanta Hawks"],["BOS","Boston Celtics"],["BKN","Brooklyn Nets"],["CHA","Charlotte Hornets"],["CHI","Chicago Bulls"],["CLE","Cleveland Cavaliers"],["DAL","Dallas Mavericks"],["DEN","Denver Nuggets"],["DET","Detroit Pistons"],["GSW","Golden State Warriors"],["HOU","Houston Rockets"],["IND","Indiana Pacers"],["LAC","LA Clippers"],["LAL","Los Angeles Lakers"],["MEM","Memphis Grizzlies"],["MIA","Miami Heat"],["MIL","Milwaukee Bucks"],["MIN","Minnesota Timberwolves"],["NOP","New Orleans Pelicans"],["NYK","New York Knicks"],["OKC","Oklahoma City Thunder"],["ORL","Orlando Magic"],["PHI","Philadelphia 76ers"],["PHX","Phoenix Suns"],["POR","Portland Trail Blazers"],["SAC","Sacramento Kings"],["SAS","San Antonio Spurs"],["TOR","Toronto Raptors"],["UTA","Utah Jazz"],["WAS","Washington Wizards"]
-],
-NFL:[
-["ARI","Arizona Cardinals"],["ATL","Atlanta Falcons"],["BAL","Baltimore Ravens"],["BUF","Buffalo Bills"],["CAR","Carolina Panthers"],["CHI","Chicago Bears"],["CIN","Cincinnati Bengals"],["CLE","Cleveland Browns"],["DAL","Dallas Cowboys"],["DEN","Denver Broncos"],["DET","Detroit Lions"],["GB","Green Bay Packers"],["HOU","Houston Texans"],["IND","Indianapolis Colts"],["JAX","Jacksonville Jaguars"],["KC","Kansas City Chiefs"],["LV","Las Vegas Raiders"],["LAC","Los Angeles Chargers"],["LAR","Los Angeles Rams"],["MIA","Miami Dolphins"],["MIN","Minnesota Vikings"],["NE","New England Patriots"],["NO","New Orleans Saints"],["NYG","New York Giants"],["NYJ","New York Jets"],["PHI","Philadelphia Eagles"],["PIT","Pittsburgh Steelers"],["SF","San Francisco 49ers"],["SEA","Seattle Seahawks"],["TB","Tampa Bay Buccaneers"],["TEN","Tennessee Titans"],["WAS","Washington Commanders"]
-],
-players:{
-NBA:{
-LAL:[["Luka Doncic","PG","95"],["LeBron James","SF","96"],["Austin Reaves","SG","84"],["Rui Hachimura","PF","79"],["Deandre Ayton","C","83"]],
-BOS:[["Jayson Tatum","SF","95"],["Jaylen Brown","SG","93"],["Derrick White","PG","85"],["Jrue Holiday","PG","84"],["Al Horford","C","80"]],
-OKC:[["Shai Gilgeous-Alexander","PG","98"],["Jalen Williams","SF","90"],["Chet Holmgren","C","90"],["Alex Caruso","PG","82"],["Isaiah Hartenstein","C","82"]],
-DEN:[["Nikola Jokic","C","98"],["Jamal Murray","PG","88"],["Aaron Gordon","PF","83"],["Christian Braun","SG","80"],["Cameron Johnson","SF","80"]],
-NYK:[["Jalen Brunson","PG","95"],["Karl-Anthony Towns","C","88"],["Mikal Bridges","SF","84"],["OG Anunoby","SF","84"],["Josh Hart","SG","82"]],
-SAS:[["Victor Wembanyama","C","97"],["De'Aaron Fox","PG","90"],["Stephon Castle","PG","83"],["Dylan Harper","SG","82"],["Jeremy Sochan","PF","79"]],
-GSW:[["Stephen Curry","PG","95"],["Jimmy Butler","SF","88"],["Draymond Green","PF","82"],["Brandin Podziemski","SG","80"],["Moses Moody","SG","78"]],
-PHX:[["Devin Booker","SG","93"],["Kevin Durant","PF","96"],["Bradley Beal","SG","84"],["Dillon Brooks","SF","80"],["Mark Williams","C","81"]],
-MIL:[["Giannis Antetokounmpo","PF","97"],["Damian Lillard","PG","89"],["Myles Turner","C","83"],["Kyle Kuzma","PF","79"],["Taurean Prince","SF","76"]],
-CLE:[["Donovan Mitchell","SG","93"],["Darius Garland","PG","88"],["Evan Mobley","PF","91"],["Jarrett Allen","C","87"],["De'Andre Hunter","SF","80"]]
-},
-NFL:{
-KC:[["Patrick Mahomes","QB","98"],["Travis Kelce","TE","92"],["Chris Jones","DT","94"],["Isiah Pacheco","RB","84"],["Xavier Worthy","WR","83"]],
-BUF:[["Josh Allen","QB","99"],["James Cook","RB","90"],["Dalton Kincaid","TE","83"],["Matt Milano","LB","90"],["Greg Rousseau","EDGE","86"]],
-BAL:[["Lamar Jackson","QB","98"],["Derrick Henry","RB","94"],["Mark Andrews","TE","90"],["Marlon Humphrey","CB","88"],["Roquan Smith","LB","93"]],
-PHI:[["Jalen Hurts","QB","94"],["Saquon Barkley","RB","96"],["A.J. Brown","WR","95"],["DeVonta Smith","WR","90"],["Jalen Carter","DT","92"]],
-DET:[["Jared Goff","QB","90"],["Jahmyr Gibbs","RB","94"],["Amon-Ra St. Brown","WR","96"],["Penei Sewell","OT","96"],["Aidan Hutchinson","EDGE","95"]],
-SF:[["Brock Purdy","QB","88"],["Christian McCaffrey","RB","96"],["George Kittle","TE","94"],["Trent Williams","OT","95"],["Nick Bosa","EDGE","96"]],
-DAL:[["Dak Prescott","QB","89"],["CeeDee Lamb","WR","96"],["Micah Parsons","EDGE","98"],["DaRon Bland","CB","87"],["Zack Martin","G","90"]],
-MIA:[["Tua Tagovailoa","QB","88"],["Tyreek Hill","WR","96"],["Jaylen Waddle","WR","91"],["De'Von Achane","RB","93"],["Jalen Ramsey","CB","90"]]
-}}
-};
+const TEAMS=[
+['ATL','Atlanta Hawks'],['BOS','Boston Celtics'],['BKN','Brooklyn Nets'],['CHA','Charlotte Hornets'],['CHI','Chicago Bulls'],['CLE','Cleveland Cavaliers'],['DAL','Dallas Mavericks'],['DEN','Denver Nuggets'],['DET','Detroit Pistons'],['GSW','Golden State Warriors'],['HOU','Houston Rockets'],['IND','Indiana Pacers'],['LAC','LA Clippers'],['LAL','Los Angeles Lakers'],['MEM','Memphis Grizzlies'],['MIA','Miami Heat'],['MIL','Milwaukee Bucks'],['MIN','Minnesota Timberwolves'],['NOP','New Orleans Pelicans'],['NYK','New York Knicks'],['OKC','Oklahoma City Thunder'],['ORL','Orlando Magic'],['PHI','Philadelphia 76ers'],['PHX','Phoenix Suns'],['POR','Portland Trail Blazers'],['SAC','Sacramento Kings'],['SAS','San Antonio Spurs'],['TOR','Toronto Raptors'],['UTA','Utah Jazz'],['WAS','Washington Wizards']];
+const DECADES=['1960s','1970s','1980s','1990s','2000s','2010s','2020s'];
+// PPG,RPG,APG,SPG,BPG, positions. Historical season/era-level representative stats.
+const P=(name,pos,ppg,rpg,apg,spg,bpg,team,decade)=>({name,pos,ppg,rpg,apg,spg,bpg,team,decade});
+const PLAYERS=[
+P('Bill Russell','C/PF',16.3,22.5,4.3,0.0,0.0,'BOS','1960s'),P('Wilt Chamberlain','C',33.5,24.6,4.1,0.0,0.0,'PHI','1960s'),P('Jerry West','PG/SG',28.7,5.8,5.6,0,0,'LAL','1960s'),P('Oscar Robertson','PG',30.3,10.1,9.7,0,0,'CIN','1960s'),
+P('Kareem Abdul-Jabbar','C',34.8,16.6,4.6,0,4.1,'MIL','1970s'),P('Julius Erving','SF/PF',26.9,8.5,4.1,2.0,1.5,'PHI','1970s'),P('Moses Malone','C',27.4,14.6,1.8,1.0,1.5,'HOU','1970s'),P('Bob McAdoo','PF/C',28.2,12.8,2.6,1.1,2.1,'BUF','1970s'),P('Walt Frazier','PG',20.4,6.0,6.7,2.4,0.2,'NYK','1970s'),P('Bill Walton','C',18.9,13.2,5.0,1.0,2.5,'POR','1970s'),
+P('Magic Johnson','PG',19.6,7.3,11.9,1.6,0.4,'LAL','1980s'),P('Larry Bird','SF/PF',28.1,10.5,6.6,1.6,0.9,'BOS','1980s'),P('Michael Jordan','SG',35.0,6.9,5.9,2.8,0.8,'CHI','1990s'),P('Hakeem Olajuwon','C',27.8,11.9,3.6,1.6,3.7,'HOU','1990s'),P('Karl Malone','PF',27.4,10.7,3.9,1.4,0.8,'UTA','1990s'),P('John Stockton','PG',15.8,2.8,14.5,3.0,0.2,'UTA','1990s'),P('David Robinson','C',27.6,10.8,2.9,1.7,3.2,'SAS','1990s'),P('Scottie Pippen','SF',21.0,7.7,7.0,2.0,1.0,'CHI','1990s'),P('Shaquille O\'Neal','C',29.7,13.6,3.8,0.5,3.0,'LAL','2000s'),P('Kobe Bryant','SG',35.4,5.3,4.5,1.8,0.4,'LAL','2000s'),P('Tim Duncan','PF/C',22.3,12.4,3.2,0.9,2.7,'SAS','2000s'),P('Kevin Garnett','PF/C',24.2,13.9,5.0,1.5,2.2,'MIN','2000s'),P('Steve Nash','PG',18.8,3.3,11.6,1.0,0.1,'PHX','2000s'),P('Dirk Nowitzki','PF',26.6,9.0,2.8,0.7,1.0,'DAL','2000s'),P('Dwyane Wade','SG',30.2,5.0,7.5,2.2,1.3,'MIA','2000s'),P('LeBron James','SF/PF',27.5,7.2,7.2,1.7,1.1,'CLE','2010s'),P('Stephen Curry','PG',30.1,5.4,6.7,2.1,0.2,'GSW','2010s'),P('Kevin Durant','SF/PF',32.0,7.4,5.5,1.3,1.3,'OKC','2010s'),P('James Harden','SG/PG',36.1,6.6,7.5,2.0,0.9,'HOU','2010s'),P('Giannis Antetokounmpo','PF/C',29.5,13.6,5.6,1.0,1.0,'MIL','2020s'),P('Nikola Jokic','C',27.1,13.8,7.9,1.5,0.9,'DEN','2020s'),P('Luka Doncic','PG/SG',32.4,9.6,9.2,1.4,0.5,'DAL','2020s'),P('Joel Embiid','C',33.1,10.2,4.2,1.0,1.7,'PHI','2020s'),P('Jayson Tatum','SF/PF',30.1,8.8,4.9,1.1,0.7,'BOS','2020s'),P('Shai Gilgeous-Alexander','PG/SG',32.7,5.0,6.4,1.7,1.0,'OKC','2020s'),P('Victor Wembanyama','C/PF',24.3,11.0,3.7,1.2,3.8,'SAS','2020s'),
+P('Dominique Wilkins','SF',30.3,6.5,2.9,1.3,0.6,'ATL','1980s'),P('Isiah Thomas','PG',21.2,3.6,13.9,2.1,0.3,'DET','1980s'),P('Dennis Rodman','PF',7.5,16.8,2.8,0.8,0.7,'DET','1990s'),P('Reggie Miller','SG',24.6,3.4,2.9,1.2,0.3,'IND','1990s'),P('Patrick Ewing','C',28.6,11.0,2.4,0.9,3.0,'NYK','1990s'),P('Charles Barkley','PF',25.2,11.7,4.9,1.6,0.8,'PHX','1990s'),P('Clyde Drexler','SG/SF',27.2,6.9,6.9,2.0,0.7,'POR','1990s'),P('Gary Payton','PG',19.2,4.7,8.3,2.9,0.2,'SEA','1990s'),P('Allen Iverson','PG/SG',33.0,4.4,7.4,2.5,0.2,'PHI','2000s'),P('Tracy McGrady','SG/SF',32.1,6.5,5.5,1.7,0.8,'ORL','2000s'),P('Yao Ming','C',25.0,9.4,2.0,0.4,2.0,'HOU','2000s'),P('Chris Paul','PG',22.8,5.5,11.6,2.7,0.1,'NOP','2000s'),P('Dwight Howard','C',22.9,14.5,1.9,1.0,2.8,'ORL','2010s'),P('Russell Westbrook','PG',31.6,10.7,10.4,1.6,0.4,'OKC','2010s'),P('Kawhi Leonard','SF',30.5,7.7,4.0,2.1,0.8,'TOR','2010s'),P('Anthony Davis','PF/C',28.1,11.1,2.3,1.5,2.6,'NOP','2010s'),P('Damian Lillard','PG',30.0,4.3,8.0,1.0,0.3,'POR','2020s'),P('Jimmy Butler','SF',23.9,6.7,5.5,1.8,0.6,'MIA','2020s'),P('Donovan Mitchell','SG',29.2,4.3,4.3,1.5,0.5,'CLE','2020s'),P('Devin Booker','SG',34.0,4.5,7.1,0.9,0.4,'PHX','2020s'),P('Anthony Edwards','SG/SF',27.6,5.7,4.5,1.2,0.6,'MIN','2020s'),P('Jalen Brunson','PG',28.7,3.0,6.7,0.9,0.1,'NYK','2020s'),P('Jaylen Brown','SG/SF',23.0,5.9,3.0,1.2,0.4,'BOS','2020s'),P('Evan Mobley','PF/C',18.5,9.3,3.2,0.8,2.0,'CLE','2020s'),
+P('Wes Unseld','C',16.8,18.2,4.5,0.0,0.0,'WAS','1970s'),P('Elgin Baylor','SF',34.8,19.8,4.5,0,0,'LAL','1960s'),P('Jerry Lucas','PF/C',19.0,18.4,4.8,0,0,'NYK','1970s'),P('George Gervin','SG',33.1,5.0,3.6,1.7,1.0,'SAS','1980s'),P('Adrian Dantley','SF',30.7,5.7,4.0,1.0,0.2,'UTA','1980s'),P('Alex English','SF',29.8,5.7,4.4,1.3,0.6,'DEN','1980s'),P('Moses Malone','C',31.1,14.7,1.8,1.0,1.5,'PHI','1980s'),P('Julius Erving','SF/PF',28.4,7.4,4.6,2.1,1.8,'PHI','1980s')
+];
+const ALIASES={CIN:'SAC',SEA:'OKC',BUF:'LAC'};
+PLAYERS.forEach(p=>p.team=ALIASES[p.team]||p.team);
+const VALID_COMBOS=[...new Set(PLAYERS.map(p=>p.team+'|'+p.decade))];
